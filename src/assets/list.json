@@ -1,0 +1,32 @@
+{
+  "list": [
+    {
+      "id": 0,
+      "image": "4187.jpg",
+      "name": "4187",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "views": 10
+    },
+    {
+      "id": 1,
+      "image": "3256.jpg",
+      "name": "3256",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "views": 10
+    },
+    {
+      "id": 2,
+      "image": "3258.jpg",
+      "name": "3258",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "views": 10
+    },
+    {
+      "id": 3,
+      "image": "4188.jpg",
+      "name": "4188",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "views": 10
+    }
+  ]
+}

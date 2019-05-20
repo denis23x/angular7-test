@@ -1,0 +1,40 @@
+<div class="container my-5">
+  <div class="row justify-content-between align-items-center">
+    <div class="col-lg-6">
+      <button [routerLink]="['add']" type="button" class="btn btn-success">Add new item</button>
+      <h2 *ngIf="storeService.list.length > 0" class="my-3">Total items: {{storeService.list.length}}, views: {{storeService.totalViews}}</h2>
+    </div>
+    <div class="col-lg-6" *ngIf="storeService.list.length > 0">
+      <div class="btn-group my-3" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-light" [class.active]="!listView" (click)="listView = false">Card</button>
+        <button type="button" class="btn btn-light" [class.active]="listView" (click)="listView = true">List</button>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-5" *ngIf="storeService.list.length > 0">
+    <div [ngClass]="{'col-lg-6':!listView, 'col-lg-12':listView}" class="col-lg-6" *ngFor="let item of storeService.list">
+      <div class="card mb-3" >
+        <div class="row no-gutters">
+          <div [ngClass]="{'col-md-4':!listView, 'col-md-2':listView}">
+            <img [routerLink]="['detail', item?.id]" [src]="'assets/images/' + item?.image" class="card-img" alt="{{item?.name}}">
+          </div>
+          <div [ngClass]="{'col-md-8':!listView, 'col-md-10':listView}">
+            <div class="card-body">
+              <h5 class="card-title">Model {{item?.name}}</h5>
+              <p class="card-text">{{item?.description}}</p>
+              <p class="card-text">
+                <small class="text-muted">Views: {{item?.views}}</small>
+              </p>
+              <a [routerLink]="['detail', item?.id]" class="btn btn-primary">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row my-5 text-center" *ngIf="storeService.list.length === 0">
+    <div class="col-sm">
+      <h2>Empty list, please <a [routerLink]="['add']">add new items</a></h2>
+    </div>
+  </div>
+</div>

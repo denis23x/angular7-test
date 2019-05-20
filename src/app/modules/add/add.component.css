@@ -1,0 +1,23 @@
+.form-group-radio-image {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.form-group-radio-image > input {
+  display: none;
+}
+
+.form-group-radio-image > img {
+  width: 100%;
+  max-width: 100px;
+  display: block;
+}
+
+.form-group-radio-image > img.selected {
+  background: #6c757d;
+}
+
+.form-group > .form-group-radio-image {
+  margin: 0 20px 0 0;
+}
